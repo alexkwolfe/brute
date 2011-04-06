@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  caller_number: MyString
+  target_number: MyString
+  max_duration_seconds: 1
+
+two:
+  caller_number: MyString
+  target_number: MyString
+  max_duration_seconds: 1

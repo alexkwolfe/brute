@@ -1,0 +1,27 @@
+<h1>Listing calls</h1>
+
+<table>
+  <tr>
+    <th>Caller number</th>
+    <th>Target number</th>
+    <th>Max duration seconds</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @calls.each do |call| %>
+  <tr>
+    <td><%= call.caller_number %></td>
+    <td><%= call.target_number %></td>
+    <td><%= call.max_duration_seconds %></td>
+    <td><%= link_to 'Show', call %></td>
+    <td><%= link_to 'Edit', edit_call_path(call) %></td>
+    <td><%= link_to 'Destroy', call, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Call', new_call_path %>

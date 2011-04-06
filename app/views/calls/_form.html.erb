@@ -1,0 +1,29 @@
+<%= form_for(@call) do |f| %>
+  <% if @call.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@call.errors.count, "error") %> prohibited this call from being saved:</h2>
+
+      <ul>
+      <% @call.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :caller_number %><br />
+    <%= f.text_field :caller_number %>
+  </div>
+  <div class="field">
+    <%= f.label :target_number %><br />
+    <%= f.text_field :target_number %>
+  </div>
+  <div class="field">
+    <%= f.label :max_duration_seconds %><br />
+    <%= f.text_field :max_duration_seconds %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

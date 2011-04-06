@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Caller number:</b>
+  <%= @call.caller_number %>
+</p>
+
+<p>
+  <b>Target number:</b>
+  <%= @call.target_number %>
+</p>
+
+<p>
+  <b>Max duration seconds:</b>
+  <%= @call.max_duration_seconds %>
+</p>
+
+
+<%= link_to 'Edit', edit_call_path(@call) %> |
+<%= link_to 'Back', calls_path %>
